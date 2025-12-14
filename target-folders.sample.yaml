@@ -1,0 +1,5 @@
+# このファイルを target-folders.yaml にコピーし、システムに合わせてパスを編集してください。
+"target-folders":
+  "repo": "C:\\Users\\YourUser\\AppData\\LocalLow\\semiwork\\Repo\\saves"
+
+"backup-folder": "C:\\Users\\YourUser\\Documents\\save-backup"
