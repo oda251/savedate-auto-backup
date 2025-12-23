@@ -31,6 +31,11 @@ def windows_to_unix_path(path: str) -> str:
     if not isinstance(path, str):
         return path
     p = path.strip().strip('"')
+
+    # If running on Windows, do not convert to /mnt/ paths
+    if os.name == 'nt':
+        return p
+
     # Match drive letter at start, e.g. C:\ or C:/. Also handle forward slashes after colon.
     m = re.match(r"^([A-Za-z]):[\\/](.*)$", p)
     if not m:
